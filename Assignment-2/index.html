@@ -45,6 +45,13 @@
         transition: 0.5s;
         cursor: pointer;
       }
+      .signup-section select {
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid white;
+        border-radius: 0.5rem;
+        outline: none;
+      }
       h1 {
         text-align: center;
         color: black;
@@ -89,6 +96,7 @@
       a{
         text-decoration: none;
       }
+      
 
       .employee-details {
         margin-top: 1rem;
@@ -145,14 +153,23 @@
       <h1>Company Directory Portal</h1>
       <form action="#">
         <h2>Employee Registration Form</h2>
-        <label for="name"> Full name</label>
+        
+        <label for="name"> Full name:</label>
         <input type="text" name="name" id="name" />
-        <label for="email">Email</label>
+
+        <label for="email">Email:</label>
         <input type="email" name="email" id="email" />
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password" name="confirmPassword" id="confirmPassword" />
+
+       <label for="department">Department:</label>
+          <select name="department" id="department">
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Marketing">Marketing</option>
+          </select>
+   
+
+       <label for="profilePic">Profile Picture URL:</label>
+        <input type="text" name="profilePic" id="profilePic" />
         <button type="submit">Register Employee</button>
       </form>
     </section>
