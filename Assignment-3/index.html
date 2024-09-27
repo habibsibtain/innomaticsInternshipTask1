@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "content"
+    "signup"
+    "features";
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  grid-area: header;
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  height: 6rem;
+}
+
+.content {
+  display: grid;
+  grid-area: content;
+  background-color: lightgray;
+  padding: 20px;
+  text-align: center;
+  height: 9rem;
+  place-items: center;
+}
+
+.signup {
+  grid-area: signup;
+  background-color: lightyellow;
+  padding: 20px;
+  text-align: center;
+  place-items: center;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+
+}
+
+.feature {
+  display: grid;
+  place-items: center;
+  background-color: lightcoral;
+  padding: 20px;
+  text-align: center;
+  height: 10rem;
+ 
+}
+
+
+.feature-1 {
+  background-color: lightcoral;
+}
+.feature-2 {
+  background-color: lightseagreen;
+}
+.feature-3 {
+  background-color: lightpink;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    grid-template-areas: 
+      "header header"
+      "content content"
+      "signup feature-1"
+      "feature-2 feature-3";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .features {
+    display: contents; 
+  }
+
+  .feature-1 {
+    grid-area: feature-1;
+  }
+  .feature-2 {
+    grid-area: feature-2;
+  }
+  .feature-3 {
+    grid-area: feature-3;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-areas: 
+      "header header header"
+      "features features features"
+      "signup signup signup"
+      "content content content";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .features {
+    grid-area: features;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+ 
+
+  .feature-1, .feature-2, .feature-3 {
+    grid-area:auto;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">HEADER</div>
+    <div class="content">CONTENT</div>
+    <div class="signup">SIGN UP</div>
+    <div class="features">
+      <div class="feature feature-1">FEATURE 1</div>
+      <div class="feature feature-2">FEATURE 2</div>
+      <div class="feature feature-3">FEATURE 3</div>
+      
+    </div>
+  </div>
+</body>
+</html>
