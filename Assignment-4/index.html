@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Learning Platform</title>
+  <style>
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      max-width: 1200px;
+    }
+
+    header {
+      background: #007BFF;
+      padding: 20px 0;
+      color: white;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #FFD700;
+    }
+
+    .hero {
+      background: url('https://c1.wallpaperflare.com/preview/127/366/443/library-book-bookshelf-read.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      color: white;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      background-color: #FFD700;
+      color: #333;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background-color: #FFC107;
+    }
+
+    .courses {
+      padding: 50px 0;
+      background: #f4f4f4;
+    }
+
+    .courses h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .course-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .course {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 30%;
+      margin-bottom: 20px;
+    }
+
+    .course img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .course h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .course p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .instructors {
+      padding: 50px 0;
+      background: white;
+    }
+
+    .instructors h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .instructor-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .instructor {
+      text-align: center;
+      width: 30%;
+    }
+
+    .instructor img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .instructor h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .instructor p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .testimonials {
+      background: #007BFF;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .testimonial {
+      background: #0056b3;
+      padding: 20px;
+      border-radius: 10px;
+      width: 30%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .testimonial p {
+      font-size: 16px;
+      color: #ddd;
+    }
+
+    .newsletter {
+      padding: 50px 0;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      font-size: 18px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .newsletter input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .newsletter input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer ul li a:hover {
+      color: #FFD700;
+    }
+
+    @media (max-width: 768px) {
+      .course-list, .instructor-list, .testimonial-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .course, .instructor, .testimonial {
+        width: 80%;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">LearnHub</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Instructors</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Master New Skills Online</h2>
+      <p>Join thousands of learners around the world on LearnHub, and enhance your career with our curated courses.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section class="courses">
+    <div class="container">
+      <h2>Popular Courses</h2>
+      <div class="course-list">
+        <div class="course">
+          <img src="https://via.placeholder.com/150" alt="Course 1">
+          <h3>Web Development</h3>
+          <p>Learn the latest web technologies and build stunning websites.</p>
+        </div>
+        <div class="course">
+          <img src="https://via.placeholder.com/150" alt="Course 2">
+          <h3>Data Science</h3>
+          <p>Become an expert in data analysis, machine learning, and AI.</p>
+        </div>
+        <div class="course">
+          <img src="https://via.placeholder.com/150" alt="Course 3">
+          <h3>Graphic Design</h3>
+          <p>Master the art of visual communication and design creativity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="instructors">
+    <div class="container">
+      <h2>Our Instructors</h2>
+      <div class="instructor-list">
+        <div class="instructor">
+          <img src="https://via.placeholder.com/150" alt="Instructor 1">
+          <h3>John Doe</h3>
+          <p>Expert in Web Development</p>
+        </div>
+        <div class="instructor">
+          <img src="https://via.placeholder.com/150" alt="Instructor 2">
+          <h3>Jane Smith</h3>
+          <p>Data Science Specialist</p>
+        </div>
+        <div class="instructor">
+          <img src="https://via.placeholder.com/150" alt="Instructor 3">
+          <h3>Mike Ross</h3>
+          <p>Graphic Design Guru</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Our Students Say</h2>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <img src="https://via.placeholder.com/150" alt="Student 1">
+          <p>"The courses at LearnHub helped me advance my career and gain valuable skills!"</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://via.placeholder.com/150" alt="Student 2">
+          <p>"Great instructors and excellent content. Highly recommended!"</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://via.placeholder.com/150" alt="Student 3">
+          <p>"I was able to switch careers thanks to LearnHub's amazing courses."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Stay updated with the latest courses and offers</p>
+    <form>
+      <input type="email" placeholder="Enter your email">
+      <input type="submit" value="Subscribe">
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 LearnHub. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
