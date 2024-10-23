@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="P3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="quiz-logo">Quiz.</div>
+      <ul>
+        <li class="home">Home</li>
+        <li class="about">About</li>
+        <li class="services">Services</li>
+        <li class="contact">Contact</li>
+      </ul>
+    </nav>
+  
+    <div class="start-container">
+      <div class="line1">Quiz Website</div>
+      <div class="line2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda error, nemo facilis quaerat in eligendi! Mollitia accusantium itaque in, eos iusto id eaque, facilis hic quae veritatis laboriosam nulla. Deserunt!</div>
+      <button class="js-start">Start Quiz</button>
+    </div>
+  </div>
+
+  <div class="instruction-container">
+    <div class="header">Quiz Guide</div>
+    <div class="instruction">
+      <ol>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum dolor sit.</li>
+      </ol>
+    </div>
+    <div class="button-container">
+      <button class="exit">Exit Quiz</button>
+    <button class="continue">Continue</button>
+    </div>
+  </div>
+
+  <div class="quiz-popup">
+    <div class="heading">Coheral Quiz</div>
+    <div class="score-container">
+      <div class="tut">Quiz Website Tutorial</div>
+      <div class="score">Score: 0 / 5</div>
+    </div>
+    <div class="question-container">
+      <div class="question">5. What does CSS stands for ?</div>
+      <div class="options">
+        <ol class="hello" type="A" onclick="disableOptions(event)">
+          <li class="opt"></li>
+          <li class="opt"></li>
+          <li class="opt"></li>
+          <li class="opt"></li>
+        </ol>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="question-count">5 of 5 Questions</div>
+      <button class="next">Next</button>
+    </div>
+  </div>
+
+  <div class="result-container">
+    <div class="heading">Quiz Result!</div>
+    <div class="pie-chart">
+      <div class="percent">0%</div>
+    </div>
+    <div class="final-score">
+      Your Score 0 out of 5
+    </div>
+    <div class="buttons">
+      <button class="tryAgain">Try Again</button>
+      <button class="goHome">Go To Home</button>
+    </div>
+  </div>
+
+  <script src="P3.js"></script>
+</body>
+</html>
